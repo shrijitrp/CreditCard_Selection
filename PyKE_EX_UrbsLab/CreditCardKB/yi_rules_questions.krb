@@ -1,0 +1,36 @@
+# yi_rules_questions.krb
+
+no_buying
+    use what_to_bring(presto_card)
+    when
+        questions_yi.is_food(False)
+
+what_to_bring_america_express
+    use what_to_bring(america_express)
+    when
+        questions_yi.is_food(True)
+        questions_yi.is_gas(False)
+	
+what_to_bring_master_card
+    use what_to_bring(master_card)
+    when
+        questions_yi.is_food(True)
+        questions_yi.is_gas(True)
+
+what_to_bring_phone
+    use what_to_bring(phone)
+    when
+        questions_yi.any_places($ans)
+        check $ans in (1,)
+	
+what_to_bring_cash
+    use what_to_bring(cash)
+    when
+        questions_yi.any_places($ans)
+        check $ans in (2,3)
+
+what_to_bring_water
+    use what_to_bring(water)
+    when
+        questions_yi.any_places($ans)
+        check $ans in (4,)

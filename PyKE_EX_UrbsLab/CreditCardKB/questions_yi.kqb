@@ -1,0 +1,22 @@
+# questions_yi.kqb
+
+any_places($ans)
+	Are any of the following place you gonna go?
+	---
+	$ans = select_1
+		1: Local convenience store
+		2: Park
+		3: Neighbor's house
+		4: Shopping Mall
+		5: None of the above
+			! Alright
+			
+is_food($ans)
+	Are you buying food?
+	---
+	$ans = yn
+	
+is_gas($ans)
+	Are you buying gas?
+	---
+	$ans = yn

@@ -1,0 +1,24 @@
+# yi_rules.krb
+
+wear_rain_protection
+    use rain_protection(True)
+    when
+	facts_yi.food(True)
+
+what_to_bring_master_card
+    use what_to_bring(master_card)
+    when
+	rain_protection($protection)
+	facts_yi.gas(True)
+	
+what_to_bring_america_express
+    use what_to_bring(america_express)
+    when
+	rain_protection($protection)
+	facts_yi.gas(False)
+
+what_to_bring_presto_card
+    use what_to_bring(presto_card)
+    when
+	facts_yi.food(False)
+	facts_yi.gas(False)

@@ -1,0 +1,22 @@
+# yi_rules_questions.krb
+
+what_credit_card_suit_you_CIBC_Visa_Infinite
+    use what_credit_card_suit_you(CIBC_Aventura_Visa_Infinite_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (1,)
+        questions_yi.annual_income($ans)
+        check $ans in (1,)
+        questions_yi.benefits($ans)
+        check $ans in (1,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (1,)
+
+what_credit_card_suit_you_CIBC_Master_Infinite
+    use what_credit_card_suit_you(CIBI_Aventura_Master_Infinite_Card)
+    when
+        questions_yi.is_citizen(False)
+        questions_yi.is_student(True)
+

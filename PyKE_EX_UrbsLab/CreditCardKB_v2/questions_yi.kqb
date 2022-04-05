@@ -1,0 +1,48 @@
+# questions_yi.kqb
+
+
+is_citizen($ans)
+	Are you a citizen ?
+	---
+	$ans = yn
+	
+is_student($ans)
+	Are you a student?
+	---
+	$ans = yn
+
+usage($ans)
+	What is the type of usage?
+	---
+	$ans = select_1
+		1: personal use
+		2: business use
+
+annual_income($ans)
+	What is your annual income range?
+	---
+	$ans = select_1
+		1: 0-30k CAD
+		2: 30-50k CAD
+		3: 50k-100k CAD
+		4: Above 100k CAD
+			! Give me your money !
+
+benefits($ans)
+	What benefit are you looking for?
+	---
+	$ans = select_1
+		1: Welcome Bonus
+		2: Travel Bonus
+		3: Cash Back
+		4: Fraud Protection
+		5: Auto Insurance
+
+expected_annual_fee($ans)
+	How much are you willing to pay for credit card annual fee?
+	---
+	$ans = select_1
+		1: 10-100 CAD
+		2: 100-200 CAD
+		3: 200-500 CAD
+		4: No limited

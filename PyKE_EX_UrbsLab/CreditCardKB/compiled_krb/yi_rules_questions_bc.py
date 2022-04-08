@@ -107,7 +107,7 @@ def what_to_bring_phone(rule, arg_patterns, arg_context):
           for x_1 in gen_1:
             assert x_1 is None, \
               "yi_rules_questions.what_to_bring_phone: got unexpected plan from when clause 1"
-            if context.lookup_data('ans') in (1,):
+            if context.lookup_data('list') in (1,2):
               rule.rule_base.num_bc_rule_successes += 1
               yield
         rule.rule_base.num_bc_rule_failures += 1
@@ -132,7 +132,7 @@ def what_to_bring_cash(rule, arg_patterns, arg_context):
           for x_1 in gen_1:
             assert x_1 is None, \
               "yi_rules_questions.what_to_bring_cash: got unexpected plan from when clause 1"
-            if context.lookup_data('ans') in (2,3):
+            if context.lookup_data('list') in (2,3):
               rule.rule_base.num_bc_rule_successes += 1
               yield
         rule.rule_base.num_bc_rule_failures += 1
@@ -157,7 +157,7 @@ def what_to_bring_water(rule, arg_patterns, arg_context):
           for x_1 in gen_1:
             assert x_1 is None, \
               "yi_rules_questions.what_to_bring_water: got unexpected plan from when clause 1"
-            if context.lookup_data('ans') in (4,):
+            if context.lookup_data('list') in (4,):
               rule.rule_base.num_bc_rule_successes += 1
               yield
         rule.rule_base.num_bc_rule_failures += 1
@@ -190,19 +190,19 @@ def populate(engine):
                   what_to_bring_phone, None,
                   (pattern.pattern_literal('phone'),),
                   (),
-                  (contexts.variable('ans'),))
+                  (contexts.variable('list'),))
   
   bc_rule.bc_rule('what_to_bring_cash', This_rule_base, 'what_to_bring',
                   what_to_bring_cash, None,
                   (pattern.pattern_literal('cash'),),
                   (),
-                  (contexts.variable('ans'),))
+                  (contexts.variable('list'),))
   
   bc_rule.bc_rule('what_to_bring_water', This_rule_base, 'what_to_bring',
                   what_to_bring_water, None,
                   (pattern.pattern_literal('water'),),
                   (),
-                  (contexts.variable('ans'),))
+                  (contexts.variable('list'),))
 
 
 Krb_filename = '..\\yi_rules_questions.krb'

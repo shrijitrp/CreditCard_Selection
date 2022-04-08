@@ -20,17 +20,17 @@ what_to_bring_master_card
 what_to_bring_phone
     use what_to_bring(phone)
     when
-        questions_yi.any_places($ans)
-        check $ans in (1,)
+        questions_yi.any_places($list)
+        check $list = (1,)
 	
 what_to_bring_cash
     use what_to_bring(cash)
     when
-        questions_yi.any_places($ans)
-        check $ans in (2,3)
+        questions_yi.any_places($list)
+        check $list in (2,3)
 
 what_to_bring_water
     use what_to_bring(water)
     when
-        questions_yi.any_places($ans)
-        check $ans in (4,)
+        questions_yi.any_places($list)
+        check $list in (4,)

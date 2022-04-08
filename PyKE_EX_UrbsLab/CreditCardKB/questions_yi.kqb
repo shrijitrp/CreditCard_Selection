@@ -1,9 +1,10 @@
 # questions_yi.kqb
 
-any_places($ans)
+any_places($list)
 	Are any of the following place you gonna go?
+		- select all that apply
 	---
-	$ans = select_1
+	$list = select_n
 		1: Local convenience store
 		2: Park
 		3: Neighbor's house

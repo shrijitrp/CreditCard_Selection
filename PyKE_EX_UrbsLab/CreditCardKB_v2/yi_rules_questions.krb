@@ -1,7 +1,69 @@
 # yi_rules_questions.krb
 
-what_credit_card_suit_you_CIBC_Visa_Infinite
-    use what_credit_card_suit_you(CIBC_Aventura_Visa_Infinite_Card)
+## non-student
+# 1.CIBC Aeroplanº Visa Infinite* Card(Af:139,AI:60,000,ir:20.999)
+what_credit_card_suit_you_CIBC_Aeroplan_Visa_Infinite_Card
+    use what_credit_card_suit_you(CIBC_Aeroplan_Visa_Infinite_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (1,)
+        questions_yi.annual_income($ans)
+        check $ans in (2,)
+        questions_yi.benefits($ans)
+        check $ans in (1,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (3,)
+
+# 2.CIBC Aventura Visa Infinite Privilege* Card(AF:499, AI:150,000,ir:20.99)
+what_credit_card_suit_you_CIBC_Aventura_Visa_Infinite_Privilege_Card
+    use what_credit_card_suit_you(CIBC_Aventura_Visa_Infinite_Privilege_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (1,)
+        questions_yi.annual_income($ans)
+        check $ans in (3,)
+        questions_yi.benefits($ans)
+        check $ans in (1,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (3,)
+
+# 3.CIBC Aventura Gold Visa Card(Af:139, AI:15,000, ir:20.99)
+what_credit_card_suit_you_CIBC_Aventura_Gold_Visa_Card
+    use what_credit_card_suit_you(CIBC_Aventura_Gold_Visa_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (1,)
+        questions_yi.annual_income($ans)
+        check $ans in (1,)
+        questions_yi.benefits($ans)
+        check $ans in (2,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (3,)
+
+# 4.CIBC Aventura Visa Card(AF:0,AI;15,000(household),ir:20.99)
+what_credit_card_suit_you_CIBC_Aventura_Visa_Card
+    use what_credit_card_suit_you(CIBC_Aventura_Visa_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (1,)
+        questions_yi.annual_income($ans)
+        check $ans in (1,)
+        questions_yi.benefits($ans)
+        check $ans in (2,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (1,)
+
+# 5.CIBC Costcoº+ Mastercard (AF:0, AI:15,000, ir:19.75%)
+what_credit_card_suit_you_CIBC_Costco_Mastercard
+    use what_credit_card_suit_you(CIBC_Costco_Mastercard)
     when
         questions_yi.is_citizen(True)
         questions_yi.is_student(False)
@@ -14,9 +76,152 @@ what_credit_card_suit_you_CIBC_Visa_Infinite
         questions_yi.expected_annual_fee($ans)
         check $ans in (1,)
 
-what_credit_card_suit_you_CIBC_Master_Infinite
-    use what_credit_card_suit_you(CIBI_Aventura_Master_Infinite_Card)
+# 6. CIBC Select Visa Card(Af:29, AI:15,000, ir:13.99%)
+what_credit_card_suit_you_CIBC_Select_Visa_Card
+    use what_credit_card_suit_you(CIBC_Select_Visa_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (2,)
+        questions_yi.annual_income($ans)
+        check $ans in (1,)
+        questions_yi.benefits($ans)
+        check $ans in (3,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (2,)
+
+# 7. CIBC bizline Visa* Card for Business(Af:0,Ai:35,000,ir:15%)
+what_credit_card_suit_you_CIBC_bizline_Visa_Card_for_Business
+    use what_credit_card_suit_you(CIBC_bizline_Visa_Card_for_Business)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (2,)
+        questions_yi.annual_income($ans)
+        check $ans in (1,)
+        questions_yi.benefits($ans)
+        check $ans in (3,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (1,)
+
+# 8. TD Emerald Flex Rate Visa Card:
+what_credit_card_suit_you_TD_Emerald_Flex_Rate_Visa_Card:
+    use what_credit_card_suit_you(TD_Emerald_Flex_Rate_Visa_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (1,)
+        questions_yi.annual_income($ans)
+        check $ans in (1,)
+        questions_yi.benefits($ans)
+        check $ans in (3,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (2,)
+
+# 9. TD Cash Back Visa Infinite Card
+what_credit_card_suit_you_TD_Cash_Back_Visa_Infinite_Card
+    use what_credit_card_suit_you(TD_Cash_Back_Visa_Infinite_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (1,)
+        questions_yi.annual_income($ans)
+        check $ans in (2,)
+        questions_yi.benefits($ans)
+        check $ans in (2,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (3,)
+
+# 10. TDº Aeroplanº Visa Business Card
+what_credit_card_suit_you_TD_Aeroplan_Visa_Business_Card
+    use what_credit_card_suit_you(TD_Aeroplan_Visa_Business_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (2,)
+        questions_yi.annual_income($ans)
+        check $ans in (1,)
+        questions_yi.benefits($ans)
+        check $ans in (1,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (3,)
+
+# 11. TD Business Select RateTM Visa Card
+what_credit_card_suit_you_TD_Business_Select_RateTM_Visa_Card
+    use what_credit_card_suit_you(TD_Business_Select_RateTM_Visa_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (2,)
+        questions_yi.annual_income($ans)
+        check $ans in (2,)
+        questions_yi.benefits($ans)
+        check $ans in (3,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (1,)
+
+# 12. CIBC Aeroplanº Visa Infinite Privilege
+what_credit_card_suit_you_CIBC_Aeroplan_Visa_Infinite_Privilege
+    use what_credit_card_suit_you(CIBC_Aeroplan_Visa_Infinite_Privilege)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(False)
+        questions_yi.usage($ans)
+        check $ans in (2,)
+        questions_yi.annual_income($ans)
+        check $ans in (3,)
+        questions_yi.benefits($ans)
+        check $ans in (2,)
+        questions_yi.expected_annual_fee($ans)
+        check $ans in (3,)
+
+## student
+# 13.TD Rewards Visa Card
+what_credit_card_suit_you_TD_Rewards_Visa_Card
+    use what_credit_card_suit_you(TD_Rewards_Visa_Card)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(True)
+        questions_yi.benefits_student($ans)
+        check $ans in (2,)
+    
+# 14.CIBC Aeroplan Visa Card for Students
+what_credit_card_suit_you_CIBC_Aeroplan_Visa_Card_for_Students
+    use what_credit_card_suit_you(CIBC_Aeroplan_Visa_Card_for_Students)
+    when
+        questions_yi.is_citizen(True)
+        questions_yi.is_student(True)
+        questions_yi.benefits_student($ans)
+        check $ans in (1,)
+
+# 15.CIBC Dividend Visa Card for Students
+what_credit_card_suit_you_CIBC_Dividend_Visa_Card_for_Students
+    use what_credit_card_suit_you(CIBC_Dividend_Visa_Card_for_Students)
     when
         questions_yi.is_citizen(False)
         questions_yi.is_student(True)
+        questions_yi.benefits_student($ans)
+        check $ans in (2,)
 
+# 16.ScotiaBank Scene Card
+what_credit_card_suit_you_ScotiaBank_Scene_Card
+    use what_credit_card_suit_you(ScotiaBank_Scene_Card)
+    when
+        questions_yi.is_citizen(False)
+        questions_yi.is_student(True)
+        questions_yi.benefits_student($ans)
+        check $ans in (1,)
+
+## non-citizen & non-student
+# 17.No card
+what_credit_card_suit_you_nothing
+    use what_credit_card_suit_you(Sorry_nothing_fits_you)
+    when
+        questions_yi.is_citizen(False)
+        questions_yi.is_student(False)

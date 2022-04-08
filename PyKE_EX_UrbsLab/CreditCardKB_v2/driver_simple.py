@@ -41,8 +41,8 @@ def bc_test_questions():
     try:
         with engine.prove_goal('yi_rules_questions.what_credit_card_suit_you($bring)') as gen: #STUDENTS: you will need to edit this line
             for vars, plan in gen:
-                # print("get in to for loop")
                 print("The credit card suit you the best is: %s" % (vars['bring'])) #STUDENTS: you will need to edit this line
+                # print("link: %s" % (vars['link'])) #STUDENTS: you will need to edit this line
 
     except Exception:
         # This converts stack frames of generated python functions back to the

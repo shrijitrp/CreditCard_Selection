@@ -22,27 +22,30 @@ annual_income($ans)
 	What is your annual income range?
 	---
 	$ans = select_1
-		1: 0-30k CAD
-		2: 30-50k CAD
-		3: 50k-100k CAD
-		4: Above 100k CAD
+		1: 0-50k CAD
+		2: 50-100k CAD
+		3: 100k CAD and above 
 			! Give me your money !
 
 benefits($ans)
 	What benefit are you looking for?
 	---
 	$ans = select_1
-		1: Welcome Bonus
-		2: Travel Bonus
-		3: Cash Back
-		4: Fraud Protection
-		5: Auto Insurance
+		1: Travel benefits & Cashback
+		2: Insurance & Protection
+		3: Welcome bonus & Low interest rates/fee
+
+benefits_student($ans)
+	What benefit would you prefer?
+	---
+	$ans = select_1
+		1: Travel points
+		2: Cashback
 
 expected_annual_fee($ans)
 	How much are you willing to pay for credit card annual fee?
 	---
 	$ans = select_1
-		1: 10-100 CAD
-		2: 100-200 CAD
-		3: 200-500 CAD
-		4: No limited
+		1: No annual fee
+		2: 10-100 CAD
+		3: 100-300 CAD
